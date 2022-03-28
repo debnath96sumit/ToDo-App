@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login |ToDo</title>
+    {% load static %}
+    <link rel="stylesheet" href=" {% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="form">
+        <form action="" method='POST'>
+            {% csrf_token %}
+            <h3>Web Developement</h3>
+            <div class="name" id="Name"> <input type="email" class="details" name ='email' placeholder="Email" required="required"></div>
+            <div class="name" id="pass"><input type="password" class="details" name='password' placeholder="Password" required="required"></div>
+            <div class="check">
+                <input type="checkbox">
+                <p>Remember me</p>
+
+            </div>
+            <div class="submit"><input type="Submit" value="LOGIN"></div>
+        </form>
+    </div>
+    <script>
+        document.querySelector(".submit").addEventListener("click", function () {
+            document.querySelector(".submit").classList.toggle("active");
+        })
+        document.getElementById("Name").addEventListener("click", function () {
+            document.getElementById("Name").classList.toggle("menuactive");
+        })
+        document.getElementById("pass").addEventListener("click", function () {
+            document.getElementById("pass").classList.toggle("menuactive");
+        })
+
+    </script>
+</body>
+
+</html>
