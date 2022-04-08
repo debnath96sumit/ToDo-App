@@ -31,6 +31,5 @@ def search(request):
     alltasks = Task.objects.filter(taskTitle__icontains =query)
     context = {'tasks': alltasks}
     return render(request, 'search.html', context)
-    # return HttpResponse("This is search")
 
        
